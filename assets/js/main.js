@@ -4,23 +4,6 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-$("mc-embedded-subscribe-form").submit(function(e) {
-
-    var ref = $(this).find("[required]");
-
-    $(ref).each(function(){
-        if ( $(this).val() == '' )
-        {
-            alert("Required field should not be blank.");
-
-            $(this).focus();
-
-            e.preventDefault();
-            return false;
-        }
-    });  return true;
-});
-
 (function() {
 
 	"use strict";
@@ -188,4 +171,22 @@ $("mc-embedded-subscribe-form").submit(function(e) {
 
 		})();
 
-})();
+})(jQuery);
+
+
+$("mc-embedded-subscribe-form").submit(function(e) {
+
+    var ref = $(this).find("[required]");
+
+    $(ref).each(function(){
+        if ( $(this).val() == '' )
+        {
+            alert("Required field should not be blank.");
+
+            $(this).focus();
+
+            e.preventDefault();
+            return false;
+        }
+    });  return true;
+});
