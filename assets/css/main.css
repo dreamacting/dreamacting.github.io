@@ -752,7 +752,6 @@
 	input[type="email"],
 	select,
 	textarea {
-		width: 200px;
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
