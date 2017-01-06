@@ -174,7 +174,7 @@
 })();
 
 
-$("mc-embedded-subscribe-form").submit(function(e) {
+$("form").submit(function(e) {
 
     var ref = $(this).find("[required]");
 
