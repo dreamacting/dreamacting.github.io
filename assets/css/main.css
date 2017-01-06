@@ -1,6 +1,8 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 @font-face { font-family: Vanitas; src: url('Vanitas ExtraBold.otf'); } 
+@font-face { font-family: Vanitas; src: url('Vanitas ExtraBold.ttf'); } 
+@font-face { font-family: Vanitas; src: url('Vanitas ExtraBold.woff'); } 
 
 /*
 	Eventually by HTML5 UP
@@ -750,6 +752,7 @@
 	input[type="email"],
 	select,
 	textarea {
+		width: 200px;
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
@@ -771,7 +774,6 @@
 		outline: 0;
 		padding: 0 1em;
 		text-decoration: none;
-		width: 100%;
 	}
 
 		input[type="text"]:invalid,
