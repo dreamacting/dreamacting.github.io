@@ -169,27 +169,23 @@
 
 				});
 
+			$("form").submit(function(e) {
+
+			    var ref = $(this).find("[required]");
+
+			    $(ref).each(function(){
+			        if ( $(this).val() == '' )
+			        {
+			            alert("Required field should not be blank.");
+
+			            $(this).focus();
+
+			            e.preventDefault();
+			            return false;
+			        }
+			    });  return true;
+			});
+
 		})();
 
 })();
-
-$("form").submit(function(e) {
-
- if (!e.target.checkValidity()) { 
-  console.log("I am Safari"); // Safari continues with form regardless of checkValidity being false
-  e.preventDefault(); // dismiss the default functionality
-
-  $('#yourFormId :input:visible[required="required"]').each(function()
-    {
-        if(!this.validity.valid)
-        {
-            $(this).focus();
-            $(this).attr("placeholder", this.validationMessage).addClass('placeholderError');
-            $(this).val(''); // clear value so it shows error message on Placeholder.
-            return false;
-        }
-    });
-    return; // its invalid, don't continue with submission
-}
-
-    e.preventDefault(); // have to add it again as Chrome, Firefox will neve see above
