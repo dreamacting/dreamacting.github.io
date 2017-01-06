@@ -4,7 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-$("form").submit(function(e) {
+$("mc-embedded-subscribe-form").submit(function(e) {
 
     var ref = $(this).find("[required]");
 
